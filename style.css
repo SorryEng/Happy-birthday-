@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #00ff00;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid #00ff00;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.terminal-header {
+    background: #333;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 20px -20px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.close { background: #ff5f56; }
+.minimize { background: #ffbd2e; }
+.maximize { background: #27c93f; }
+
+.terminal-title {
+    text-align: center;
+    flex: 1;
+    color: #ccc;
+    font-size: 14px;
+}
+
+#output {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    min-height: 400px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prompt {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+#userInput {
+    background: transparent;
+    border: none;
+    color: #00ff00;
+    font-size: 16px;
+    outline: none;
+    flex: 1;
+    font-family: 'Courier New', monospace;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    background: #00ff00;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.loading-bar {
+    background: #333;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 10px 0;
+}
+
+.loading-fill {
+    background: #00ff00;
+    height: 20px;
+    border-radius: 3px;
+    transition: width 0.1s;
+}
+
+.cake {
+    text-align: center;
+    margin: 20px 0;
+    color: #ff6b6b;
+    font-family: monospace;
+    white-space: pre;
+    line-height: 1.2;
+}
+
+.message {
+    color: #4ecdc4;
+    margin: 10px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.blinking {
+    animation: blink 2s infinite;
+}
+
+.error {
+    color: #ff6b6b;
+}
+
+.success {
+    color: #27c93f;
+}
+
+.warning {
+    color: #ffbd2e;
+}
+
+.info {
+    color: #4ecdc4;
+}
